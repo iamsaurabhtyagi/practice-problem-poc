@@ -7,6 +7,14 @@ public class Solution {
 
     }
 
+    /**
+     *
+     * @param arriveAlice "10-14"
+     * @param leaveAlice  "10-20"
+     * @param arriveBob   "10-18"
+     * @param leaveBob    "10-25"
+     * @return 3 "In above example Alice and Bob was together from 18 to 20"
+     */
     public int countDaysTogether(String arriveAlice, String leaveAlice, String arriveBob, String leaveBob) {
         int spentTogetherDays = 0;
 
