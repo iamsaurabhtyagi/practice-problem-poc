@@ -20,6 +20,12 @@ public class MaximumWaterBucket {
         }
     }
 
+    /**
+     * O(n^2)
+     *
+     * @param arr
+     * @return
+     */
     private static int maxWaterAmountInBucket(int[] arr) {
         int max = 0;
 
@@ -36,6 +42,12 @@ public class MaximumWaterBucket {
         return max;
     }
 
+    /**
+     * O(n)
+     *
+     * @param arr
+     * @return
+     */
     private static int maxWaterAmountInBucketBySlidingWindow(int[] arr) {
         int max = 0;
 
