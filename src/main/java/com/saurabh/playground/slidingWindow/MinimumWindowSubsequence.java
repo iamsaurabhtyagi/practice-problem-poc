@@ -10,6 +10,11 @@ public class MinimumWindowSubsequence {
 
     private static String minWindowSubsequence(String s1, String s2) {
 
+        if(s1 == null || s2 == null)
+            return null;
+        if(s1.length() < s2.length())
+            return "";
+
         var i = 0;
         var j = 0;
 
