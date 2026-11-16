@@ -13,13 +13,11 @@ public class MaximumSumSubarray {
         var j = 0;
         var result = Integer.MIN_VALUE;
 
-
         var sum = 0;
         while (j < arr.length) {
 
             if(j > k - 1) {
                 sum = sum - arr[i] + arr[j];
-
                 i++;
             } else {
                 sum += arr[j];
