@@ -10,22 +10,28 @@ public class MinimumSizeSubarraySum {
 
     private static int minSizeSubarraySum(int[] arr, int target) {
 
-        var result = Integer.MAX_VALUE;
         var left = 0;
         var right = 0;
         var sum = 0;
-        var subarraySize = arr.length;
+        var minLength = arr.length;
 
         while (right < arr.length) {
 
 
             if(sum < target) {
-                sum += arr[right];
-                right++;
-            } else {
-                subarraySize = right - left + 1;
+                sum += arr[right++];
             }
+
+            while (sum >= target) {
+                var currentLength = right - left;
+                if(minLength > currentLength)
+                    minLength = currentLength;
+
+                sum -= arr[left++];
+            }
+
         }
-        return 0;
+
+        return minLength;
     }
 }
